@@ -10,10 +10,12 @@
     <h1>This is my new spiceworks app - Hello World!</h1>
     <script type="text/javascript">
         $(document).ready(function(){
+            console.log("IN");
             var card = new SW.Card();
             var inventory = card.services('inventory');
 
             inventory.request('devices').then(function(data){
+                console.log("Requesting");
                 console.log(data);
             })
         })
